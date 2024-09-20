@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    
+
+  <main class="flex justify-center items-center">
+ 
+
+    <div class="mockup-phone ">
+      <div class="camera"></div>
+      <div class="display ">
+        <div class="artboard artboard-demo phone-2 bg-teal-50">
+        <div>
+            <!-- money btn -->
+
+          <div class="stats shadow ">
+              <div class="stat">
+                <div class="stat-title">Account Balance</div>
+                <div class="stat-value" id="balance">8900</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- button class -->
+
+       <div class="grid grid-cols-3 mt-3 gap-3 ">
+          <button class="btn bg-indigo-600 text-white"  id="add-money">Add Money</button>
+          <button class="btn bg-orange-600 text-white" id="cash-out">Cash Out</button>
+          <button class="btn bg-yellow-400 " id="transaction">Transaction</button>
+       </div>
+
+          <div class="divider"></div>
+
+          <!-- add from area -->
+
+          <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl" id="add-money-from">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text" id="">Add Amount</span>
+                  </label>
+                  <input id="number" type="text" placeholder="amount" class="input input-bordered" autocomplete="off" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input id="password" type="password" placeholder="Enter PIN (1234)" class="input input-bordered" required />
+                  
+                </div>
+                <div class="form-control mt-6">
+                  <button id="loginBtn" class="btn btn-primary">Add Money</button>
+                </div>
+              </form>
+          </div>
+
+          <!-- cashout -->
+          <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl" id="cash-out-form">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text" id="">Withdraw</span>
+                  </label>
+                  <input id="number1" type="text" placeholder="amount" class="input input-bordered" autocomplete="off" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text" >Pin</span>
+                  </label>
+                  <input id="password1" type="password" placeholder="Enter PIN" autocomplete="off" class="input input-bordered" required />
+                  
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cashout-btn" class="btn  btn-primary bg-orange-600 text-white font-bold">Cashout</button>
+                </div>
+              </form>
+          </div>
+          
+
+          <!-- transection from -->
+           <div id="transection-from" class="hidden">
+
+           </div>
+          
+        </div>
+      </div>
+  </div>
+  </main>
+    
+
+      <script src="utilites.js"></script>
+      <script src="index.js"></script>
+      <script src="showFrom.js"></script>
+</body>
+</html>
